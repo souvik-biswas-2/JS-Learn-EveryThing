@@ -114,7 +114,7 @@ function ParentFunction(){
 // })
 
 // forEach
-const array = [1, 2, 3, 4, 5, 6];
+const array = [1, 2, 3, 4, 5];
 
 array.forEach( (elem)=>{
     console.log(elem);
@@ -130,3 +130,9 @@ const newarr = array.map( (value) => {
 const newarr2 = array.filter( (value) => {
     if (value > 5) return true;
 } );
+
+// reduce 
+
+const ans = array.reduce( (accumulator, value) => { 
+    return accumulator + value;
+},0) // 0 is the accumulator
