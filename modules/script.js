@@ -39,3 +39,94 @@ let a;
 console.log(a);
 let b = null;
 console.log(b);
+
+// arithmetic, comparison, logical, assignment, unary, ternary operators
+
+// + - * / % ** 
+// = == === 
+// < > >= <= ! != !== !!
+// && || 
+// ?:
+
+// rest and spread (...)
+// -> if ... uses in function parameter it is rest
+// -> if ... uses in arrays and objects it is spread
+
+
+// first class function
+// -> function is treating as a value
+
+// higher - order function
+// -> function that accepts function in parameters or returns a function
+function abcd(){
+    return function() {
+        console.log("Hello");
+    }
+}
+
+abcd()();
+
+
+// pure vs impure function
+// -> pure
+function Print(){
+    console.log("Hello");
+    
+}
+
+// -> impure
+let c = 1;
+function Hello(){
+    c++;
+}
+
+// closure function
+// -> function returns a function that returned function will be using variables of parent function 
+
+function ParentFunction(){
+    let a = 12;
+    return function(){
+        console.log(a);
+        
+    }
+}
+
+
+// IIFE - immediately invoked function expressions
+(function(){
+
+})();
+
+// hoisting - we can use function or var before they declared 
+// hoisting is possible in function statements only not possible in expression and arrow function
+
+
+
+// Array
+// push() pop()
+// shift() ->> removes a value from begining of the array
+// unshift() ->> adds a value from begining of the array
+// splice(2,1) ->> removes 1 value from second index (splice modifies the origin array)
+// slice(0,3) ->> return a copy of array portion (0,3) gives an array of [0th index to 2nd index(one place before)]
+
+// array.sort(function(a,b){
+//     return a - b; //ascending order b-a for descending
+// })
+
+// forEach
+const array = [1, 2, 3, 4, 5, 6];
+
+array.forEach( (elem)=>{
+    console.log(elem);
+})
+
+// map
+const newarr = array.map( (value) => {
+    if(value < 5) return false;
+    else return true
+} );
+
+// filter
+const newarr2 = array.filter( (value) => {
+    if (value > 5) return true;
+} );
