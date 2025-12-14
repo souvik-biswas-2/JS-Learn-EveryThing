@@ -136,3 +136,29 @@ const newarr2 = array.filter( (value) => {
 const ans = array.reduce( (accumulator, value) => { 
     return accumulator + value;
 },0) // 0 is the accumulator
+
+// Object
+// for in loop
+
+const user = {
+    name: 'Souvik',
+    age: 22,
+    email: 'souvik@dev.com'
+}
+
+for(let key in user){
+    console.log(user[key]);
+    
+}
+
+// make a array of object keys
+// Object.keys(user) 
+
+// copying of object 
+// when object having nested keys then don't use spread opearator 
+
+const user2 = JSON.parse(JSON.stringify(user));
+
+// optional chaining
+
+user?.email
