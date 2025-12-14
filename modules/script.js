@@ -162,3 +162,11 @@ const user2 = JSON.parse(JSON.stringify(user));
 // optional chaining
 
 user?.email
+
+// destructuring key as a variable
+
+const obj1 = {
+    'first-name': 'Souvik',
+}
+
+let {'first-name' : FirstName} = obj1;
